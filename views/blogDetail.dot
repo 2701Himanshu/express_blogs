@@ -1,0 +1,53 @@
+---
+layout: layout.dot
+title: Blog Detail Page
+---
+[[##header:
+#]]
+
+[[##content:
+
+	<div class="blog-details-container">
+		<img class="blog-image" width="100%" height="600px" src="/uploads/[[= model.detail.image]]">
+		<div class="title-div">
+			<h1 class="title">[[= model.detail.title]]</h1>
+			<div class="row">
+				<div class="col-6">
+					<p>Written by <span class="author-name">[[= model.detail.authorName]]</span></p> 		
+				</div>
+				<div class="col-6">
+					<p style="text-align: right;">at <span class="author-name">[[= model.detail.time]]</span></p>	
+					[[? model.detail.action]]
+						<p style="text-align: right;">
+							<a class="blog-action-btn">
+								Edit
+							</a>
+							<a class="blog-action-btn">
+								Delete
+							</a>
+						</p>
+					[[?]]
+				</div>
+			</div>
+		</div>
+		<div class="desc-div">
+			<p>[[= model.detail.description]]</p>	
+		</div>
+	</div>
+
+	<div class="blog-comments container">
+		<h3>Comments</h3>
+		[[~ model.detail.comments :value:index]]
+			<div class="comment">
+				<div class="comment-metadata">
+					<div class="row">
+						<p class="col">[[= value.username]]</p>
+						<p class="col" style="text-align: right">[[= value.time]]</p>
+					</div>
+				</div>
+				<p>[[= value.comment]]</p>
+			</div>
+		[[~]]
+		[[= partial('partials/commentForm.dot')]]	
+	</div>
+#]]

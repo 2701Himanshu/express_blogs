@@ -1,0 +1,9 @@
+
+	<form>
+	  <label for="exampleFormControlTextarea1">Your Comment</label>
+	  <div id="editor">
+		<p>This is the editor content.</p>
+	  </div>
+
+	  <button type="button" class="btn btn-success" id="submitComment">Submit</button>
+	</form>

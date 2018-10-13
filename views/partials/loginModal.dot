@@ -1,0 +1,20 @@
+<div id="id01" class="modal modal-dialog">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <h2>Login</h2>
+      <button type="button" class="close" style="position: absolute;top: -30px;right: 10px;" onclick="document.getElementById('id01').style.display='none'">&times;</button>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" id="loginUser" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="loginPass" placeholder="Enter Password" name="psw" required>
+      
+      <p id="loginErrorMsg" style="color: red;margin: 0;"></p>
+      <button class="login-button" type="button" id="login">Login</button>
+    </div>
+  </form>
+</div>

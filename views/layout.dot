@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<title>Best2Learn</title>
+	<script type="text/javascript" src="/vendor/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/vendor/angular.min.js"></script>
+	<script type="text/javascript" src="/vendor/ckeditor/ckeditor.js"></script>
+
+	<script type="text/javascript" src="/javascripts/partials/signupModal.js"></script>
+	<script type="text/javascript" src="/javascripts/partials/loginModal.js"></script>
+	<script type="text/javascript" src="/javascripts/script.js"></script>
+	<script type="text/javascript" src="/javascripts/partials/addCommentForm.js"></script>
+</head>
+<body>
+
+	[[= partial('partials/header.dot')]]
+	<div class="container-fluid no-padding">
+
+	  	[[= layout.header]]
+	  	<div class="container-fluid main-content">
+	  		[[= layout.content]]
+	  	</div>
+		
+	</div>
+	<!-- [[=partial('partials/footer.dot')]] -->
+	
+	[[=partial('partials/loginModal.dot')]]
+
+	[[=partial('partials/signupModal.dot')]]
+
+
+</body>
+	
+</html>

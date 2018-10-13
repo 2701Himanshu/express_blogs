@@ -1,0 +1,18 @@
+---
+layout: layout.dot
+title: Auth Error Page
+---
+[[##header:
+#]]
+
+[[##content:
+	<h4></h4>
+	<div class="jumbotron">
+	  <h1 class="display-4">Authentication Error</h1>
+	  <p class="lead">You have to login first to create a blog</p>
+	  <hr class="my-4">
+	  <p class="lead">
+	    <a class="btn btn-primary btn-lg" style="color: #fff;" onclick="document.getElementById('id01').style.display='block'" role="button">Login</a>
+	  </p>
+	</div>
+#]]

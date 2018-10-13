@@ -1,0 +1,27 @@
+---
+layout: layout.dot
+title: Blog List Page
+---
+
+[[##header:
+#]]
+
+[[##content:
+	<div class="jumbotron" style="text-align: center;">
+	  <h3 class="display-1">[[= model.title]]</h3>
+	</div>
+	<div class="container blogList">
+		<ul class="list-unstyled">
+		  [[~ model.blogList :value:index]]
+			  <li class="media">
+			    <img class="mr-3" src="uploads/[[= value.image]]" alt="Generic placeholder image">
+			    <div class="media-body">
+			      <h4 class="mt-0 mb-1">[[= value.title]]</h4>
+			      <p>[[= value.description]]</p>
+			    </div>
+			    <a class="button" href="blogDetail/[[= value._id]]">Read More</a>
+			  </li>
+		  [[~]]
+		</ul>
+	</div>
+#]]

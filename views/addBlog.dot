@@ -1,0 +1,33 @@
+---
+layout: layout.dot
+title: Add Blog Page
+---
+[[##header:
+#]]
+
+[[##content:
+	<div class="jumbotron">
+	  <h3 style="text-align: center;" class="display-4">[[= model.title]]</h3>
+	</div>
+	<div class="container">
+		<form action="/blogAdded/" method="post" enctype="multipart/form-data">
+		  <div class="form-group">
+		    <label for="title">Title</label>
+		    <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp" value="[[= model.edit]] ? [[= model.data.title]] : ''" placeholder="Enter Title">
+		    <small id="emailHelp" class="form-text text-muted">Please provide a title for your blog.</small>
+		  </div>
+		  <div class="form-group">
+		    <label for="image">Image</label>
+		    <input type="file" class="form-control-file" name="image" id="image">
+		  </div>
+		  <textarea hidden class="form-control" id="description" name="description" rows="8"></textarea>
+		  <div id="editor">
+			<p>This is the editor content.</p>
+		  </div>
+		  <input type="hidden" class="form-control" name="authorId" id="blogAuthorId" />
+		  <input type="hidden" class="form-control" name="authorName" id="blogAuthorName" />
+
+		  <button style="width: 100%;" id="submitBlogFrom" type="submit" class="btn btn-primary">Submit</button>
+		</form>	
+	</div>
+#]]

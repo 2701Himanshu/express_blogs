@@ -1,0 +1,22 @@
+<div id="signup" class="modal modal-dialog">
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <h2>Register</h2>
+      <button type="button" class="close" style="position: absolute;top: -30px;right: 10px;" onclick="document.getElementById('signup').style.display='none'">&times;</button>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" id="username" placeholder="Enter Username" name="uname" required>
+
+      <label for="uname"><b>Email</b></label>
+      <input type="text" id="email" placeholder="Enter Email Address" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+      
+      <p id="errorMsg" style="color: red;margin: 0;"></p>
+      <button class="login-button" style="background: #4a83ca" type="button" id="register">Register</button>
+    </div>
+  </form>
+</div>

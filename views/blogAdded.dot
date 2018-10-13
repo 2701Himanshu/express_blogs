@@ -1,0 +1,14 @@
+---
+layout: layout.dot
+title: Add Blog Page
+---
+
+[[##header:
+#]]
+
+[[##content:
+	<div class="jumbotron" style="text-align: center;">
+	  <h3 class="display-1">[[= model.message]]</h3>
+	  <a style="color:#fff;" href="/addBlog/" type="submit" class="btn btn-primary">Add Another Blog</a>
+	</div>
+#]]

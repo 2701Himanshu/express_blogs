@@ -1,0 +1,37 @@
+---
+layout: layout.dot
+title: Blog Detail Page
+---
+[[##header:
+#]]
+
+[[##content:
+	<div class="jumbotron" style="padding: 1rem;margin: 0px;">
+	  <h1 class="display-4" style="text-align: center;">Blogs</h1>
+	</div>
+	<table class="table table-bordered table-hover table-striped table-dark container" style="border:1px solid #aeaeae;">
+	  <thead>
+	    <tr>
+	      <th scope="col">#</th>
+	      <th scope="col">Title</th>
+	      <th scope="col">Author</th>
+	      <th scope="col">Time</th>
+	      <th scope="col">Action</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	[[~ model.list :value:index ]]
+	    <tr>
+	      <th scope="row">[[= index+1]]</th>
+	      <td>[[= value.title]]</td>
+	      <td>[[= value.authorName]]</td>
+	      <td>[[= value.time]]</td>
+	      <td>
+	      	<a class="blog-list-action edit" href="/adminBlogList/[[= value._id]]/blogEdit">Edit</a>
+	      	<a class="blog-list-action delete" href="/adminBlogList/[[= value._id]]/delete">Delete</a>
+	      </td>
+	    </tr>
+	    [[~]]
+	  </tbody>
+	</table>
+#]]

@@ -1,0 +1,14 @@
+---
+layout: layout.dot
+title: Error
+---
+
+[[##head:
+	
+#]]
+
+[[##body:
+	<h1>[[=model.message]]</h1>
+	<h2>[[=model.error.status]]</h2>
+	<pre>[[!model.error.stack]]</pre>
+#]]
